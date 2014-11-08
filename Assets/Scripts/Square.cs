@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Square : MonoBehaviour {
+[System.Serializable]
+public class Square{
 	public GameObject squareObject;
-	public int movePenalty = 1;
 	public Position position;
-	public Material[] origMaterials;
+	public TerrainType terrainType;
 }

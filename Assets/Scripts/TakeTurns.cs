@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -17,6 +17,7 @@ public class TakeTurns : MonoBehaviour {
 	private Piece currentPiece;
 	// Update is called once per frame
 	void Update () {
+		/*
 		if (Input.GetMouseButtonDown (0)) { // if left button pressed...
 				Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 				RaycastHit hit;
@@ -51,10 +52,11 @@ public class TakeTurns : MonoBehaviour {
 					}
 				}
 			}
-		}
+		}*/
 	}
 
 	void GenerateMoveTable(Dictionary<int,Move> moves, Move move){
+		/*
 		if (move.MovesLeft < 0)
 			return;
 		Move similarMove;
@@ -79,7 +81,7 @@ public class TakeTurns : MonoBehaviour {
 		//loadMap.map [z, x].squareObject.renderer.materials = new Material[]{selectMaterial};
 
 
-		if (z < loadMap.worldHeight - 1) {
+		if (z < loadMap.worldLength - 1) {
 			GenerateMoveTable (moves, new Move(new Position(x, loadMap.map[z+1,x].position.Y, z + 1),move.MovesLeft - 1 - (int)Mathf.Abs(loadMap.map[z+1,x].position.Y - loadMap.map[z,x].position.Y),move));
 		}
 		if(z > 0)
@@ -88,6 +90,7 @@ public class TakeTurns : MonoBehaviour {
 			GenerateMoveTable (moves, new Move(new Position(x + 1, loadMap.map[z,x + 1].position.Y, z),move.MovesLeft - 1 - (int)Mathf.Abs(loadMap.map[z,x+1].position.Y - loadMap.map[z,x].position.Y),move));
 		if(x > 0)
 			GenerateMoveTable (moves, new Move(new Position(x - 1, loadMap.map[z,x - 1].position.Y, z), move.MovesLeft - 1 - (int)Mathf.Abs(loadMap.map[z,x - 1].position.Y - loadMap.map[z,x].position.Y),move));
+		*/
 	}
 
 }
